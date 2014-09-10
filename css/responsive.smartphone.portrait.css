@@ -1,0 +1,255 @@
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the default font size on small devices */
+html {
+  font-size: 112.5%;
+}
+
+#logo {
+  width: 64px;
+}
+
+#logo img {
+  height: 100%;
+}
+
+.page-user-login.not-logged-in #site-slogan {
+  font-size: 90%;
+  text-align: center;
+}
+
+/* Usermenü Authentifizierter User*/
+/* Usermenü Gast*/
+.region-leaderboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 47px;
+  background-color: white;
+  z-index: 99;
+  border-top: 1px solid lightgrey;
+}
+
+.region-leaderboard ul {
+  text-align: right;
+  margin: 6px 0;
+}
+
+.region-leaderboard ul li {
+  display: inline;
+  margin: 0 4px;
+}
+
+#branding {
+  width: 70px;
+}
+
+/* =============================================================================
+ *   Login
+ * ========================================================================== */
+
+.page-user-login.not-logged-in #columns {
+  width: 100%;
+}
+
+.page-user-login.not-logged-in #tasks ul {
+  padding: 0;
+}
+
+.page-user-login.not-logged-in #tasks ul,
+.page-user-login.not-logged-in #tasks ul li,
+.page-user-login.not-logged-in #tasks ul li a {
+    width: 100%;
+    margin: 0;
+    border: none;
+    text-align: center;
+}
+
+/* hide current page tab, only show others */
+.page-user-login.not-logged-in #tasks ul li a.active {
+  display: none;
+}
+
+.page-user-login.not-logged-in input[type="text"],
+.page-user-login.not-logged-in input[type="password"] {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header#main-content-header {
+  margin: 0;
+  width: 100%;
+}
+
+/* =============================================================================
+ *   Search
+ * ========================================================================== */
+
+.region-search {}
+
+.region-usermenu {
+  clear: right;
+}
+
+#block-search-form {
+  margin: 10px 0 0 0;
+}
+
+input[id="edit-search-block-form--2"] {
+  width: 80px;
+}
+
+/* =============================================================================
+ *   Startseite
+ * ========================================================================== */
+#site-slogan {
+  display: none;
+}
+
+div.view-startseite div.item-list ul li {
+  width: 33%;
+  float: left;
+  margin: 0;
+}
+
+.view-startseite ul li .views-field-name span a {
+  position: relative;
+  top: -2em;      
+  font-family: 'Shadows Into Light';
+  font-size: 0.7em;
+  color: #A9A9A9;
+  text-shadow: -1px 1px #000;
+}
+
+#block-block-13 {
+  font-size: 70%;
+}
+
+
+
+/* =============================================================================
+ *   Ansicht des Einzelbeitrags
+ * ========================================================================== */
+ 
+div.region.region-two-66-33-first {
+  width: 95%;
+}
+
+div.region.region-two-66-33-second  {
+  width: 95%;
+  float: left;
+}
+ 
+ 
+.field-name-presented-by .user-picture {
+  float: right;
+  clear: right;
+  margin-right: 10px;
+}
+
+.field-name-presented-by p {
+  font-size: 70%;
+}
+
+.field-name-field-schlagworte,
+.field-name-field-schlagworte-wandern {
+  float: right;
+  clear: right;
+}
+
+div.region.region-two-66-33-first {
+  width: 95%;
+}
+
+div.region.region-two-66-33-second  {
+  width: 95%;
+  float: left;
+}
+
+/* Größe des Eingabefeldes des Kommentars*/
+#comment-form #edit-subject {
+  width: 100%;
+}
+
+/* =============================================================================
+ *   Kalender
+ * ========================================================================== */
+
+/* - Kalender-Bild - damit der User sein Smartphone dreht - */
+
+.page-kalender #page-title:after {
+  content:url(images/smartphone_landscape_orange_klein)
+}
+
+ul.primary li,
+ul.primary li a {
+  width: 90%;
+}
+
+ul.primary li:first-child a {
+  border-radius: 10px 10px 0 0;
+}
+
+ul.primary li:last-child a {
+  border-radius: 0 0 10px 10px;
+}
+/* =============================================================================
+ *   Kontaktformular
+ * ========================================================================== */
+
+#contact-site-form #edit-name,
+#contact-site-form #edit-mail,
+#contact-site-form #edit-subject {
+  width: 100%;
+}
+
+/* =============================================================================
+ *   Beitrag hinzufügen
+ * ========================================================================== */
+ 
+#node-28 .neuer_Beitrag a {
+  font-size: 80%;
+}
+ 
+#freizeittipp-node-form #edit-title,
+#freizeittipp-node-form #edit-field-telefon-und-0-value,
+#freizeittipp-node-form #edit-field-email-und-0-email,
+#freizeittipp-node-form #edit-field-link-und-0-url,
+#wandern-node-form #edit-title,
+#event-node-form #edit-title,
+#event-node-form #edit-field-telefon-und-0-value,
+#event-node-form  #edit-field-link-und-0-url{
+  width: 100%;
+}
+
+/* =============================================================================
+ *   User-Menü
+ * ========================================================================== */
+ 
+.page-user #page-title:after {
+  content:url(images/smartphone_landscape_orange_klein)
+}
+
+/* =============================================================================
+ *   Card-List 2
+ * ========================================================================== */
+
+.view-beitraege .card-list-wrapper ul li {
+  width: 49.2%; /* www.responsivegridsystem.com/calculator */
+}
+
+.view-beitraege .card-list-wrapper ul li:nth-child(2n) {
+  margin-right: 0;
+}
+
+#media-ident:after {
+  content: "smartphone.portrait";
+}

@@ -1,0 +1,172 @@
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the body font size on small devices */
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* Increase the body font size on small devices */
+
+html {
+  font-size: 112.5%;
+}
+
+div.region-header nav#block-system-user-menu {
+  float: left;
+  width: 80%;
+  height: 4em;
+  border: none;
+  border-radius: 6px;
+  margin: 0 15px 1em 15px;
+}
+
+#block-system-user-menu ul.menu.clearfix li {
+  list-style: none;
+  display: inline;
+}
+
+/* =============================================================================
+ *   Startseite
+ * ========================================================================== */
+
+#logo {
+  width: 64px;
+}
+
+#logo img {
+  height: 100%;
+}
+ 
+
+div.view-startseite div.item-list ul li {
+  width: 33%;
+  float: left;
+  margin: 0;
+}
+
+.page-startseite div#branding {
+  width: 80px;
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.page-startseite div#branding div#logo  {
+  width: 100%;
+}
+
+
+div.region-header {
+  display: table-cell;
+}
+
+
+div.view-startseite div.item-list ul li {
+  width: 33%;
+  float: left;
+  margin: 0;
+}
+
+.view-startseite ul li .views-field-name span a {
+  position: relative;
+  top: -2em;      
+  font-family: 'Shadows Into Light';
+  font-size: 0.7em;
+  color: #A9A9A9;
+  text-shadow: -1px 1px #000;
+}
+
+#block-block-13 {
+  font-size: 70%;
+}
+
+
+/* =============================================================================
+ *   Ansicht des Einzelbeitrags
+ * ========================================================================== */
+ 
+div.region.region-two-66-33-first {
+  width: 95%;
+}
+
+div.region.region-two-66-33-second  {
+  width: 95%;
+  float: left;
+}
+
+ 
+.field-name-presented-by .user-picture {
+  float: right;
+  clear: right;
+  margin-right: 10px;
+}
+
+.field-name-presented-by p {
+  font-size: 70%;
+}
+
+.field-name-field-schlagworte,
+.field-name-field-schlagworte-wandern {
+  float: right;
+  clear: right;
+}
+
+.field-name-submitted-by,
+.field-name-changed-date  {
+  display: none;
+}
+
+/* =============================================================================
+ *   Beitrag hinzufügen
+ * ========================================================================== */
+  
+#freizeittipp-node-form #edit-title,
+#freizeittipp-node-form #edit-field-telefon-und-0-value,
+#freizeittipp-node-form #edit-field-email-und-0-email,
+#freizeittipp-node-form #edit-field-link-und-0-url,
+#wandern-node-form #edit-title,
+#event-node-form #edit-title,
+#event-node-form #edit-field-telefon-und-0-value,
+#event-node-form  #edit-field-link-und-0-url{
+  width: 100%;
+}
+
+
+/* =============================================================================
+ *   Card-List 3
+ * ========================================================================== */
+
+.view-beitraege .card-list-wrapper ul li {
+  width: 32.26%; /* www.responsivegridsystem.com/calculator */
+}
+
+.view-beitraege .card-list-wrapper ul li:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* =============================================================================
+ *   Header
+ * ========================================================================== */
+
+.region-search {}
+
+.region-usermenu {}
+
+#name-and-slogan {
+  display: none;
+}
+
+#media-ident:after {
+  content: "smartphone.landscape";
+}

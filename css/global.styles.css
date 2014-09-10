@@ -1,0 +1,3556 @@
+/*
+ * @file
+ * global.styles
+ *
+ * Styles you add here will load for all device sizes, they are "global", as
+ * opposed to "responsive" styles, which only load for a given breakpoint (media
+ * query) that you set in theme settings. See the README for more details.
+ *
+ *
+ * How to use this file:
+ * --------------------
+ *
+ * There are many empty selectors and some basic styles to act as a guide.
+ * Nothing is set in stone and you can change anything - even delete all of it
+ * and start with your own clean slate.
+ *
+ * See global.base also which includes normalize.css and some additional
+ * helper classes and base styles.
+ */
+
+/* =============================================================================
+ *   Base
+ * ========================================================================== */[ops]
+
+/*
+ * To preserve theme settings never apply font properties to the HTML element.
+ * This is critically important if you are using the Responsive JavaScript
+ * feature as this relies on being able to set a pseudo font family on the HTML
+ * element. If you need to set default font properties of any kind use the BODY
+ * element as these can be overridden using font theme settings.
+ */
+
+html { 
+  background: #fff;
+}
+
+
+body {
+  font-family: "Raleway";
+  font-size: 87.5%;
+}
+
+/* =============================================================================
+ *   HTML Elements
+ * ========================================================================== */
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+b,
+strong {}
+
+i,
+em {}
+
+dfn {}
+
+sup {}
+
+sub {}
+
+del {}
+
+ins {}
+
+blockquote {}
+
+cite {}
+
+q {}
+
+address {}
+
+ul {}
+
+ol {}
+
+li {}
+
+dl {}
+
+dd {}
+
+dt {}
+
+abbr {}
+
+acronym {}
+
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+  font-family: Consolas, Monaco, 'Courier New', Courier, monospace, sans-serif;
+}
+
+
+/* =============================================================================
+ *   Wrappers
+ * ========================================================================== */
+
+/*
+ * Outer wrappers:
+ * - #page-wrapper: body > #page-wrapper
+ * - #page: body > #page-wrapper > #page
+ * - .container: body > #page-wrapper > #page.container
+ *
+ * The .container class holds the page width value from theme settings.
+ */
+#page {
+  background-color: white;
+}
+
+#page .container {}
+
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+#header {
+  clear: both;
+}
+
+/*
+ * Wraps the sidebars the content column
+ */
+#columns {}
+
+/*
+ * Main content column wrapper
+ */
+#content-column {}
+
+/*
+ * Wraps the main-content-header, the content region and feed-icons. Use this
+ * wrapper to style the entire main content column
+ */
+#main-content {}
+
+/*
+ * Wraps the content region, avoid applying styles to this wrapper, its used
+ * mainly for position and invisible gutters and can be problematic to style
+ */
+#content {}
+
+/*
+ * Footer wrapper
+ */
+#footer {}
+
+/*
+ * Panels may need additional margin wrangling when in the $content region
+ */
+#content .panel-display {}
+
+/*
+ * Full Width Wrappers
+ * These are used in the optional page--full-width-wrappers.tpl.php template.
+ * All have internal .container classes. In the full width wrapper template the
+ * .container classes set the width or max-width - you can style this but never
+ * add any width/margin/padding/borders etc to .container
+ */
+
+/*
+ * Wraps the leaderboard
+ */
+#leaderboard-wrapper {}
+#leaderboard-wrapper .container {}
+
+/*
+ * Wraps the header
+ */
+#header-wrapper {
+  /* Debug styles, is this working */
+  background: rgba(255, 192, 203, 0.5);
+}
+#header-wrapper .container {}
+
+/*
+ * Wraps the nav elements
+ */
+#nav-wrapper {}
+#nav-wrapper .container {}
+
+/*
+ * Wraps breadcrumb
+ */
+#breadcrumb-wrapper {}
+#breadcrumb-wrapper .container {}
+
+/*
+ * Wraps messages and help
+ */
+#messages-help-wrapper {}
+#messages-help-wrapper .container {}
+
+/*
+ * Wraps the secondary content/preface region
+ */
+#secondary-content-wrapper {}
+#secondary-content-wrapper .container {}
+
+/*
+ * Wraps the main content column
+ */
+#content-wrapper {}
+#content-wrapper .container {}
+
+/*
+ * Wraps the tertiary content/postfix region
+ */
+#tertiary-content-wrapper {}
+#tertiary-content-wrapper .container {}
+
+/*
+ * Footer wrapper
+ */
+#footer-wrapper {
+  /* Debug styles, is this working? */
+  background: rgba(255, 192, 203, 0.5);
+}
+#footer-wrapper .container {}
+
+
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+#branding {
+  width: auto;
+  float: left;
+}
+
+/*
+ * Logo
+ */
+#logo {
+  padding: 10px 0;
+  display: inline-block;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+/*
+ * Wrapper for the site name and slogan
+ */
+#name-and-slogan {
+/*   display: none; */
+}
+
+/*
+ * Site name (h1)
+ */
+#site-name {
+  margin: 0;
+}
+
+#site-name a {}
+
+#site-name a:link,
+#site-name a:visited {
+  text-decoration: none;
+  color: #FF8C00;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+  color: #FF8C00;
+}
+
+/*
+ * Site slogan (h2)
+ */
+#site-slogan {
+  font-family: "Shadows Into Light";
+  margin: 0;
+  color: #7C6868;
+}
+
+#site-slogan .username {
+  color: #FBB218;
+  border-bottom: 3px dashed #FBB218;
+}
+
+/* =============================================================================
+ *   Page content header
+ * ========================================================================== */
+
+/*
+ * Main content header wraps the page title, tabs and actions links
+ */
+#main-content-header {}
+
+/*
+ * The main page title (h1)
+ */
+#page-title {
+  margin: 0;
+  float: left;
+}
+
+
+/* =============================================================================
+ *   Misc Global Styles
+ * ========================================================================== */
+
+/*
+ * Feed icons
+ */
+.feed-icon {}
+
+/*
+ * Aggregator feed source
+ */
+#aggregator .feed-source .feed-icon {
+  display: inline;
+  float: none;
+  margin-right: 10px;
+}
+
+.feed-details dt,
+.feed-details dd {
+  display: inline;
+  margin: 0;
+}
+
+/*
+ * Generic styles for the more link
+ */
+.more-link {}
+
+/*
+ * Generic styles for links. See the ul.links declaration in node and comment
+ * stylesheets
+ */
+ul.links {
+  margin: 0;
+  padding: 0;
+}
+
+ul.links.inline {
+  display: block;
+}
+
+ul.links li {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+/*
+ * Search results are an ordered list so reset the margin
+ */
+.search-results {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Attribution message and link
+ */
+.attribution {
+  display: block;
+  opacity: 0.65;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  text-decoration: underline;
+}
+
+
+/* =============================================================================
+ *   Regions
+ * ========================================================================== */
+
+/*
+ * Standard region wrapper, don't add width to any regions, you will bork the
+ * layout - no margin, padding or borders etc
+ */
+.region {}
+
+.region-leaderboard {
+  margin: 0;
+  padding: 0;
+}
+
+#block-block-9 .block-content ul,
+#block-block-10 .block-content ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+#block-block-9 .block-content ul li,
+#block-block-10 .block-content ul li {
+  display: inline;  
+}
+
+#block-block-9 .block-content ul li img,
+#block-block-10 .block-content ul li img{
+  width: 30px;  
+}
+
+/*
+ * Regions have an inner div - perfect for adding margin, padding or borders
+ */
+.region-inner {}
+
+/*
+ * Regions can be nested, such as when using Panels
+ */
+.region-inner .region-inner {}
+
+/*
+ * Header region, embedded in the #header
+ */
+.region-header {}
+
+/*
+ * Generally used to output Drupals help block, if the help module is enabled
+ */
+.region-help {}
+
+/*
+ * Secondary content
+ */
+.region-secondary-content {}
+
+/*
+ * Sits above the main content header, like a content-top region
+ */
+.region-highlighted {}
+
+/*
+ * Sits below the main content, like a content-bottom region
+ */
+.region-content-aside {}
+
+/*
+ * Sidebars - targets both
+ */
+.sidebar {}
+
+/*
+ * First sidebar
+ */
+.region-sidebar-first {}
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {}
+
+/*
+ * Tertiary content
+ */
+.region-tertiary-content {}
+
+/*
+ * Footer region
+ */
+.region-footer {}
+
+
+/* =============================================================================
+ *   Links
+ * ========================================================================== */
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #FF8C00;
+}
+
+a:active,
+a.active {
+  color: #FF8C00;
+}
+
+a:hover,
+a:focus {
+/*   text-decoration: underline; */
+  color: #FF8C00;
+  text-shadow: -1px 1px 4px darkgrey;
+}
+
+
+/* =============================================================================
+ *   Primary, Secondary and Menu Bar region menus
+ * ========================================================================== */
+
+/*
+ * Use one of the following id's for granular control:
+ *  - #menu-bar (menu bar region)
+ *  - #primary-menu (main menu)
+ *  - #secondary-menu (secondary/user menu)
+ * You can target all of these with .nav or div[id$="menu-bar"]
+ */
+.nav {
+  clear: both;
+  margin: 10px 0;
+}
+
+.nav ul,
+.nav ul.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.nav li,
+.nav ul.menu li {
+  display: inline;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li a,
+.nav ul.menu li a {
+  display: block;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.nav li a:visited,
+.nav ul.menu li a:visited {}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav ul.menu li a:hover,
+.nav ul.menu li a:focus {}
+
+.nav .block {
+  margin-bottom: 0;
+}
+
+
+/* =============================================================================
+ *   Superfish
+ * ========================================================================== */
+
+ul.sf-menu {
+  margin-bottom: 0;
+}
+
+ul.sf-menu a {
+  border-left: 0;
+  border-top: 0;
+  padding: 0 10px;
+  text-decoration: none;
+  height: 2.5em;
+  line-height: 2.5em;
+}
+
+ul.sf-menu a:link,
+ul.sf-menu a:visited {}
+
+ul.sf-menu li {}
+
+ul.sf-menu li:hover,
+ul.sf-menu li.sfHover {
+  outline: 0;
+}
+
+ul.sf-menu a {}
+
+ul.sf-menu a:focus,
+ul.sf-menu a:hover,
+ul.sf-menu a:active {
+  outline: 0;
+}
+
+/*
+ * Superfish blocks
+ */
+.block-superfish {}
+
+.block-superfish .block-inner .content {}
+
+.block-superfish ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.block-superfish ul ul {}
+
+.block-superfish ul ul ul {}
+
+.block-superfish ul ul ul ul {}
+
+.block-superfish li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*
+ * Vertical style
+ */
+.sf-vertical {
+  width: 100%;
+}
+
+.sf-vertical li {
+  width: 100%;
+}
+
+.sf-vertical li.last {}
+
+.sf-vertical li:hover ul,
+.sf-vertical li.sfHover ul {
+  left: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sf-vertical li a {
+  padding: 0 10px;
+}
+
+/*
+ * Navbar style
+ */
+.sf-navbar {
+  padding-bottom: 0 !important;
+}
+
+/*
+ * Sensible padding for the default style
+ */
+.sf-menu.sf-style-default a {
+  padding: 0 10px;
+}
+
+
+
+
+/* =============================================================================
+ *   Menu Toggles
+ * ========================================================================== */
+
+.at-mt .at-menu-toggle,
+.at-mt .at-menu-toggle ul,
+.at-mt .at-menu-toggle ul.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.at-mt .at-menu-toggle-button {
+  margin: 0;
+}
+
+.at-mt .at-menu-toggle ul a {
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+
+
+
+/* =============================================================================
+ *   Menus, usually blocks
+ * ========================================================================== */
+
+ul.menu {
+  padding-left: 15px;
+}
+
+ul.menu ul {
+  padding-left: 15px;
+}
+
+ul.menu ul ul {}
+
+ul.menu ul ul ul {}
+
+ul.menu li {
+  margin: 0;
+}
+
+ul.menu li.collapsed,
+ul.menu li.expanded,
+ul.menu li.leaf {}
+
+ul.menu li a {}
+
+ul.menu li a:link,
+ul.menu li a:visited {}
+
+ul.menu li a:active,
+ul.menu li a.active {}
+
+ul.menu li a:hover,
+ul.menu li a:focus {}
+
+ul.menu li.active a,
+ul.menu li.active-trail a {}
+
+ul.menu li.first,
+ul.menu li.last {}
+
+/* If li.content exists it's a problem, so reset the padding */
+.block .menu li.content {
+  padding: 0;
+}
+
+
+/* =============================================================================
+ *   Book navigation menu
+ * ========================================================================== */
+
+.book-navigation {}
+
+.book-navigation .page-links {}
+
+.book-navigation .page-previous {}
+
+.book-navigation .page-next {}
+
+.book-navigation .page-up {
+  /* Prevent text wrapping to a new line, assumes the string is two chars */
+  min-width: 2em;
+  white-space: nowrap;
+}
+
+.book-navigation .menu {
+  margin-left: 0;
+}
+
+
+/* =============================================================================
+ *   Breadcrumbs
+ * ========================================================================== */
+
+#breadcrumb {
+  margin: 10px 0;
+}
+
+/* If the label is set to show in theme settings the label class is added */
+#breadcrumb .breadcrumb-label {
+  font-size: 1em;
+  display: inline;
+  padding-right: 10px;
+}
+
+#breadcrumb .breadcrumb-label:after {
+  content: ":";
+}
+
+#breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+
+#breadcrumb .with-breadcrumb-label ol {
+  display: inline;
+}
+
+#breadcrumb li {
+  list-style: none;
+  display: inline;
+}
+
+#breadcrumb li.crumb-first {}
+
+#breadcrumb li.crumb-last {}
+
+#breadcrumb a {}
+
+#breadcrumb a:link,
+#breadcrumb a:visited {}
+
+#breadcrumb a:active,
+#breadcrumb a.active {}
+
+#breadcrumb a:hover,
+#breadcrumb a:focus {}
+
+#breadcrumb .crumb-separator {}
+
+
+/* =============================================================================
+ *   Pagers
+ * ========================================================================== */
+
+ul.pager {
+  clear: both;
+  margin: 0;
+  text-align: center;
+}
+
+.item-list ul.pager li {
+  margin: 0;
+}
+
+ul.pager li {
+  background-image: none;
+  display: inline;
+  list-style-type: none;
+  padding: .5em;
+}
+
+ul.pager li.pager-current {
+  font-weight: 700;
+}
+
+.block ul.pager li {
+  margin: 0;
+}
+
+/*
+ * Theme the various states of pager links
+ */
+ul.pager li {}
+
+ul.pager li a {}
+
+ul.pager li a:link,
+ul.pager li a:visited {}
+
+ul.pager li a:active,
+ul.pager li a.active {}
+
+ul.pager li a:hover,
+ul.pager li a:focus {}
+
+ul.pager li.pager-item {}
+ul.pager li.first {}
+ul.pager li.last {}
+ul.pager li.pager-current {}
+ul.pager li.pager-first {}
+ul.pager li.pager-previous {}
+ul.pager li.pager-next {}
+ul.pager li.pager-last {}
+
+
+/* =============================================================================
+ *   Skip Navigation
+ * ========================================================================== */
+
+#skip-link {
+  left: 50%;
+  margin-left: -6.5em;
+  margin-top: 0;
+  padding: 0 0.5em;
+  position: absolute;
+  width: 12em;
+  z-index: 50;
+}
+
+#skip-link a {
+  background: #444;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+#skip-link a:link,
+#skip-link a:visited {
+  background: #444;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+#skip-link a:hover,
+#skip-link a:focus,
+#skip-link a:active {
+  outline: 0;
+}
+
+
+/* =============================================================================
+ *   Tabs (local tasks)
+ * ========================================================================== */
+
+#tasks {
+  margin-bottom: 15px;
+}
+
+ul.primary {
+  border-bottom-color: #ccc;
+  margin: 13px 0;
+  padding: 0 0 0 5px;
+}
+
+ul.primary li {
+  display: block;
+  float: left;
+  margin: 0 1px -1px;
+}
+
+ul.primary li a {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  margin-right: 1px;
+  padding: 0 10px;
+  display: block;
+  float: left;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+ul.primary li a:hover,
+ul.primary li a:focus {
+  background-color: #eee;
+  border-color: #ccc;
+}
+
+ul.primary li.active a,
+ul.primary li.active a:hover,
+ul.primary li.active a:focus {
+  background-color: #FCD994;
+  color: #fff;
+}
+
+ul.secondary {
+  border-bottom: 1px solid #ccc;
+  margin: 1em 0 0;
+  padding: 0 .3em 1em;
+}
+
+ul.secondary li {
+  border-right: 0;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+ul.secondary li a {}
+
+ul.secondary li a:hover,
+ul.secondary li a.active {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+
+/* =============================================================================
+ *   Action links
+ * ========================================================================== */
+
+ul.action-links {
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+ul.action-links li {}
+
+
+/* =============================================================================
+ *  Field Styling
+ * ========================================================================== */
+
+/*
+ * Wrapper for any field
+ */
+.field {}
+
+/*
+ * Above and inline classes are on the field wrapper
+ */
+.field-label-above {}
+
+/*
+ * When labels are set to inline in field display settings the clearfix class is
+ * automatically added
+ */
+.field-label-inline {}
+
+.field-label-inline .field-label {
+  margin: 0;
+}
+
+/*
+ * Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted
+ * ineritance issues
+ */
+.field-label {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Walter Turncoat";
+  line-height: inherit;
+  margin-bottom: 0;
+}
+
+
+
+
+/*
+ * Field types (Core)
+ */
+
+/*
+ * Image fields use the <figure> and <figcaption> elements from HTML5
+ */
+.field-type-image {}
+
+.field-type-image .caption {}
+
+.field-type-image .full-caption {}
+
+.field-type-image .teaser-caption {}
+
+/*
+ * Taxonomy
+ */
+.field-type-taxonomy-term-reference {
+  /* The same bottom margin as p, blockquote, ul, ol and dl */
+  margin-bottom: 0;
+}
+
+.field-type-taxonomy-term-reference.field-label-inline .field-items {
+  margin: 0;
+  padding: 0;
+}
+
+.field h2.field-label {
+  margin-top: 0;
+  line-height: 25px;
+}
+
+.field-type-taxonomy-term-reference.field-label-inline .field-item {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+/*
+ * Text
+ */
+.field-type-text {}
+
+/*
+ * Long text
+ */
+.field-type-text-long {}
+
+/*
+ * Text with summary
+ */
+.field-type-text-with-summary {}
+
+/*
+ * File
+ */
+.field-type-file {}
+
+/*
+ * Number/Integer
+ */
+.field-type-number-integer {}
+
+/*
+ * Decimal
+ */
+.field-type-number-decimal {}
+
+/*
+ * Number float
+ */
+.field-type-number-float {}
+
+/*
+ * List
+ */
+.field-type-list-text {}
+
+/*
+ * List boolean
+ */
+.field-type-list-boolean {}
+
+/*
+ * List integer
+ */
+.field-type-list-integer {}
+
+/*
+ * List float
+ */
+.field-type-list-float {}
+
+/*
+ * Field types (Contrib)
+ */
+.field-type-datetime {}
+
+.field-type-node-reference {}
+
+.field-type-user-reference {}
+
+/*
+ * Named fields
+ */
+.field-name-body {}
+
+.field-name-field-image {}
+
+.field-name-field-tags {}
+
+/*
+ * Underscores in field name are replaced with dashes
+ */
+.field-name-field-FIELDNAME {}
+
+/*
+ * Image Alignment Theme Settings - included here so you can easily override
+ */
+/*
+ * Float none setting
+ */
+.ia-n .field-type-image,
+.iat-n .field-type-image {}
+
+/*
+ * Float left setting
+ */
+.ia-l .field-type-image figure,
+.iat-l .field-type-image figure {
+  margin: 5px 20px 15px 0;
+}
+
+/*
+ * Centered setting
+ */
+.ia-c .field-type-image figure,
+.iat-c .field-type-image figure {
+  margin: 5px auto 15px;
+}
+
+/*
+ * Float right setting
+ */
+.ia-r .field-type-image figure,
+.iat-r .field-type-image figure {
+  margin: 5px 0 15px 20px;
+}
+
+
+/* =============================================================================
+ *   Block Styling
+ * ========================================================================== */
+
+/*
+ * Main wrapper for most blocks, block_system_main does not have it
+ */
+.block {
+/* margin-bottom: 10px;*/
+}
+
+/*
+ * Inner wrapper for most blocks, good for margin, padding and borders,
+ * block_system_main does not have it
+ */
+.block-inner {}
+
+/*
+ * The first block in the region
+ */
+.block.first {}
+
+/*
+ * The last block in the region
+ */
+.block.last {}
+
+/*
+ * Zebra striping for each block in the region
+ */
+.block.odd {}
+
+/*
+ * Zebra striping for each block in the region
+ */
+.block.even {}
+
+/*
+ * Block title
+ */
+.block-title {
+  font-size: 130% !important;
+  margin: 0;
+}
+
+/*
+ * Block content wrapper
+ */
+.block-content {}
+
+.block-content ul,
+.block-content ol {
+  padding: 0 0 0 15px;
+}
+
+.block-content li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/*
+ * Block for the latest news items in the first category
+ */
+#block-aggregator-category-1 {}
+
+/*
+ * Block for the latest news items in the first feed
+ */
+#block-aggregator-feed-1 {}
+
+/*
+ * First block created with "Add block" link
+ */
+#block-block-1 {}
+
+/*
+ * "Recent blog posts" block
+ */
+#block-blog-recent {}
+
+/*
+ * "Book navigation" block for the current book's table of contents
+ */
+#block-book-navigation {}
+
+/*
+ * "Recent comments" block
+ */
+#block-comment-recent {}
+
+/*
+ * "Active forum topics" block
+ */
+#block-forum-active {}
+
+/*
+ * "New forum topics" block
+ */
+#block-forum-new {}
+
+/*
+ * Language switcher block
+ */
+#block-locale-language {}
+
+/*
+ * Custom menu block
+ */
+#block-menu-menu-NAME {}
+
+/*
+ * "Recent content" block
+ */
+#block-node-recent {}
+
+/*
+ * "Syndicate" block for primary RSS feed; see also page.css's .feed-icon
+ */
+#block-node-syndicate {}
+
+/*
+ * "Most recent poll" block
+ */
+#block-poll-recent {}
+
+/*
+ * "Author information" block for the profile of the page's author
+ */
+#block-profile-author-information {}
+
+/*
+ * "Search form" block
+ */
+#block-search-form {}
+
+/*
+ * "Shortcuts" block
+ */
+#block-shortcut-shortcuts {}
+
+/*
+ * "Popular content" block
+ */
+#block-statistics-popular {}
+
+/*
+ * "Main menu" block
+ */
+#block-system-main-menu {}
+
+/*
+ * "Management" block for Drupal management menu
+ */
+#block-system-management {}
+
+/*
+ * "Navigation" block for Drupal navigation menu
+ */
+#block-system-navigation {}
+
+
+.region-search,
+.region-usermenu,
+.region-nav {
+  float: right;
+}
+
+.region-search .block-inner {
+  margin-right: 0;
+}
+
+/* Navigationsmenü für Events, Tipps, Wanderungen */
+.region-nav .block-block ul {
+  list-style: none;
+  margin: 0;
+}
+
+.region-nav .block-block ul li {
+  display: inline-block;
+  width: 30%;
+}
+
+
+
+#block-system-user-menu ul {
+  margin: 0;
+  float: right;
+}
+
+#block-system-user-menu ul li {
+  list-style: none;
+  display: inline-flex;
+}
+
+/*
+ * "System help" block
+ */
+#block-system-help {}
+
+/*
+ * "Main page content" block
+ */
+#block-system-main {}
+
+/*
+ * "Powered by Drupal" block
+ */
+#block-system-powered-by {}
+
+/*
+ * "User login form" block
+ */
+#block-user-login {}
+
+/*
+ * "Who's new" block for a list of the newest users
+ */
+#block-user-new {}
+
+/*
+ * "Who's online" block for a list of the online users
+ */
+#block-user-online {}
+
+
+/* =============================================================================
+ *   Node Styling
+ * ========================================================================== */
+
+.node {
+  margin-bottom: 20px;
+}
+
+.node.node-promoted {}
+
+.node.node-sticky {}
+
+.node.node-by-viewer {}
+
+.node.node-teaser {}
+
+.node.node-full {}
+
+.node.odd {}
+
+.node.even {}
+
+.node .node-title {
+  margin: 0;
+}
+
+.node .user-picture {}
+
+.node .submitted {}
+
+.node .submitted .username {}
+
+.node .submitted time {}
+
+.node .node-content {}
+
+.node ul.links {}
+
+.node ul.links li {}
+
+.node ul.links li a {}
+
+.node ul.links li.node-read-more a {}
+
+.node ul.links li.comment-add a {}
+
+.node ul.links li.comment-comments a {}
+
+.node ul.links li.comment-new-comments a {}
+
+.node ul.links li.blog-sernames-blog a {}
+
+.node ul.links li.print-html a {}
+
+.node ul.links li.print-email a {}
+
+.node ul.links li.print-pdf a {}
+
+.preview .node {}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+.node-page {}
+
+.node-article {}
+
+.node-book {}
+
+.node-forum {}
+
+.node-poll {}
+
+
+/* =============================================================================
+ *   Comment Styling - Comments, comment wrapper, comment form
+ * ========================================================================== */
+
+/*
+ * Wrapper for the list of comments and its titles
+ */
+#comments {
+  margin: 1.5em 0;
+}
+
+#comments h2 {
+  font-family: "Walter Turncoat";
+  font-size: 120%;
+}
+
+#comments h2.comment-title {
+  margin: 0;
+}
+
+#comments h2.comment-form {
+  margin: 0;
+}
+
+/*
+ * Wrapper for a single comment
+ */
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment.first {}
+
+.comment.last {}
+
+.comment.odd {}
+
+.comment.even {}
+
+.comment .user-picture {}
+
+.comment .submitted {}
+
+.comment .submitted p {}
+
+.comment .submitted .username {}
+
+.comment .submitted time {}
+
+.comment .user-signature {}
+
+.comment ul.links {}
+
+/*
+ * Comment form author
+ * (hoffentlich ist das woanders nicht wieder sichtbar - was ist "#edit-author--2" ?!?
+ */
+#comments #comment-form #edit-author--2 {
+  display: none;
+}
+
+
+
+/*
+ * Comment title
+ */
+.comment-title {
+  margin: 0;
+}
+
+/*
+ * Comment states
+ */
+.comment-new {}
+
+.comment-by-anonymous {}
+
+.comment-by-node-author {}
+
+.comment-by-viewer {}
+
+.comment-title-hidden {}
+
+.comment-with-picture {}
+
+.comment-with-signature {}
+
+/*
+ * Preview of the comment before submitting new or updated comment
+ */
+.comment-preview {}
+
+/*
+ * "New" marker for comments that are new for the current user
+ */
+.new {
+  color: #c00;
+}
+
+/*
+ * Nested comments are indented
+ */
+.indented {
+  margin-left: 40px;
+}
+
+
+/* =============================================================================
+ *   Forms
+ * ========================================================================== */
+
+/*
+ * Wrapper for a form element (or group of form elements) and its label
+ */
+.form-item {}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid #c00;
+}
+
+.form-item label,
+fieldset legend {
+  font-weight: 700;
+}
+
+.form-item label.option {}
+
+/*
+ * Highlight marks and form required mark
+ */
+.marker,
+.form-required {
+  color: #c00;
+}
+
+.form-item .description {
+  font-size: 0.85em;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item {}
+
+/*
+ * The submit button
+ */
+.form-submit {}
+
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+
+/*
+ * Define consistent borders
+ */
+fieldset {
+/*  border: 1px solid #FFC552;*/
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Tips for Drupal's input formats
+ */
+.tips {}
+
+/*
+ * Buttons used by contrib modules like Media
+ */
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+
+/* =============================================================================
+ *   Tables
+ * ========================================================================== */
+
+table {
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+}
+
+table.sticky-header {
+  z-index: 10;
+}
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #ccc;
+}
+
+table,
+td,
+th {
+  vertical-align: middle;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+}
+
+thead tr {
+  font-weight: 700;
+  background-color: #e5e5e5;
+
+}
+
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px;
+}
+
+tbody {}
+
+tbody tr {
+  border-top: 1px solid #ccc;
+}
+
+tr.odd {
+  background: #fff;
+}
+
+tr.info,
+tr.even,
+tr:nth-child(2n+2) {
+  border-bottom: 0;
+  background-color: #f5f5f5;
+}
+
+tr.drag {}
+
+tr.drag-previous {}
+
+tr.odd td.active {
+  background-color: #eee;
+}
+
+tr.even td.active {
+  background-color: #ebebeb;
+}
+
+.lt-ie8 tr {}
+
+.lt-ie8 tr.even,
+.lt-ie8 tr.odd {}
+
+.lt-ie8 tr.even th,
+.lt-ie8 tr.even td,
+.lt-ie8 tr.odd th,
+.lt-ie8 tr.odd td {
+}
+
+/*
+ * Forum tables
+ * Core sets white-space to nowrap, which makes no sense
+ */
+#forum td {}
+
+#forum td.created,
+#forum td.posts,
+#forum td.topics,
+#forum td.last-reply,
+#forum td.replies,
+#forum td.pager {
+  white-space: normal;
+}
+
+
+
+/* =============================================================================
+ *   Messages
+ * ========================================================================== */
+
+/* Left and right margin are set by the global gutter width */
+div.messages {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 85%;
+  border-radius: 6px;
+}
+
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.status {}
+
+div.warning {}
+
+tr.warning {}
+
+div.error,
+tr.error {}
+
+.error {}
+
+.warning {}
+
+/*
+ * Unpublished nodes
+ */
+.node-unpublished,
+.comment-unpublished {}
+
+.node-unpublished,
+.comment-unpublished {}
+
+.node-unpublished p.unpublished,
+.comment-unpublished p.unpublished {
+  color: pink;
+  color: rgba(239, 170, 170, 0.4);
+  font-family: Impact,"Arial Narrow",Helvetica,sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  height: 0;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+/*
+ * Otherwise these elements will appear below the "Unpublished" text
+ */
+.lt-ie8 {}
+
+.lt-ie8 .node-unpublished > *,
+.lt-ie8 .comment-unpublished > * {
+  position: relative;
+}
+
+
+/* =============================================================================
+ *    Maintenance pages
+ * ========================================================================== */
+
+.maintenance-page {}
+.maintenance-page .container {
+  padding: 40px 0;
+/*   text-align: center; */
+}
+
+.maintenance-page a {
+  color: orange;
+}
+
+.maintenance-page #site-name,
+.maintenance-page #page-title {
+  margin: 0;
+}
+
+.maintenance-page.in-maintenance #page {
+  text-align: center;
+}
+
+.maintenance-page.in-maintenance #logo,
+.maintenance-page.in-maintenance #branding {
+  float: none;
+}
+
+.db-offline {}
+
+.db-offline .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 960px;
+}
+
+.db-offline div.messages {
+  margin: 20px 0 0;
+}
+
+.db-offline #content {
+  padding: 20px 0;
+}
+
+
+/* =============================================================================
+ *   Misc overrides for contrib modules
+ * ========================================================================== */
+
+/*
+ * Admin menu overrides
+ */
+#admin-menu {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Devel Module
+ */
+.dev-query {
+  background: #eee;
+  padding: 30px;
+}
+
+/*
+ * Styleguide module tweaks
+ */
+#styleguide-header {
+  padding: 0 10px;
+}
+
+#styleguide-header .item-list {
+  font-family: inherit;
+  margin: 0 20px 20px 0;
+  min-height: 260px;
+  width: auto;
+}
+
+
+/* =============================================================================
+ *   View Beiträge allegemein
+ * ========================================================================== */
+
+
+.view-beitraege ul.card-list,
+.view-beitraege ul.card-list-mini,
+.view-beitraege-latest ul.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*Einzelbeiträge in der View*/
+
+.view-beitraege ul.card-list li {
+  float: left;
+  width: 190px;
+  height: 290px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 7px auto;
+  border: 1px solid rgba(202, 230, 217, 1);
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+}
+
+.view-beitraege ul.card-list li:first-child {
+  margin-left: 0;
+}
+
+
+
+.view-beitraege ul.card-list li .views-field-field-schlagworte,
+.view-beitraege ul.card-list li .views-field-field-schlagworte-wandern {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+ }
+ 
+.image-style-card-list {
+  border-radius: 4px 4px 0 0;
+}
+
+/* buggy */
+.view-beitraege ul.card-list li img {
+  height: 16;
+  width: 16;
+  margin: 0;
+}
+
+ul.card-list li a {
+  overflow: hidden;
+  font-family: Walter Turncoat;
+  font-weight: bold;
+  font-size:  110%;
+}
+
+.view-beitraege-latest ul.card-list li {
+  float: none;
+  clear: both;
+  width: 100%;
+}
+
+.view-beitraege-latest div.field-content a img {
+    float: left;
+    padding: 0.2em;
+}
+
+.view-beitraege-latest div.views-field-title a {
+  
+}
+
+/* Google Map */
+
+.view-display-id-attachment_gmap {
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: lightgray;
+}
+
+/*Style der PopUps*/
+div.openlayers-fp .tag-liste {
+  background-color: #ececea;
+  border-radius: 2px;
+  padding-top: 7px;
+  padding-left: 4px;
+}
+
+.olPopup .image-style-card-list {
+  height: 100px;
+}
+
+
+
+/* =============================================================================
+ *   View - Freizeittipps
+ * ========================================================================== */
+
+ /* Ansicht einzelbeiträge */
+ 
+.card-list-single-freizeittipps {
+  background: #EAF9F2;
+}
+
+
+/*	-moz-box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 1px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eaf7ca), color-stop(1, #d0e89c) );
+	background:-moz-linear-gradient( center top, #eaf7ca 5%, #d0e89c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaf7ca', endColorstr='#d0e89c');
+	background-color:#eaf7ca;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0;
+	border:1px solid #c2de91;
+	display:inline-block;
+	color:#ffffff;
+}
+ */
+
+
+/*Überschriften*/
+
+#edit-kategorie-freizeittipps-wrapper,
+#edit-schlagworte-freizeittipps-wrapper,
+#edit-alter-freizeittipps-wrapper {
+/*   display: table; */
+}
+
+label[for=edit-kategorie-freizeittipps],
+label[for=edit-schlagworte-freizeittipps],
+label[for=edit-alter-freizeittipps] {
+/*   display: table-row; */
+  color: #34491E;
+  font-size: 120%;
+  text-align: center;
+}
+
+/*Filterfelder Kategorie*/
+
+#edit-kategorie-freizeittipps-wrapper {
+  display: table;
+}
+
+/*Unterkategorie #1*/
+
+#edit-kategorie-freizeittipps-wrapper ul.bef-tree-depth-0 label {
+  color: #537231;
+}
+
+/*Unterkategorie #2*/
+
+#edit-kategorie-freizeittipps-wrapper ul.bef-tree-depth-1 label {
+  color: #82B84B;
+}
+
+/*Unterkategorie #3*/
+
+#edit-kategorie-freizeittipps-wrapper ul.bef-tree-depth-2 label {
+  color: #AAE868;
+}
+
+
+
+/*Filterfelder Schlagworte */
+
+#edit-schlagworte-freizeittipps-wrapper div.bef-checkboxes {
+  display: table;
+  padding: 10px;
+  line-height: 1;
+}
+
+.field-name-field-schlagworte-wandern li.field-item {
+  display: inline;
+}
+
+#edit-schlagworte-freizeittipps-wrapper div.bef-checkboxes > .form-type-bef-checkbox {
+   display: table-row; 
+}
+
+#edit-schlagworte-freizeittipps-12,
+#edit-schlagworte-freizeittipps-13,
+#edit-schlagworte-freizeittipps-14,
+#edit-schlagworte-freizeittipps-15,
+#edit-schlagworte-freizeittipps-16,
+#edit-schlagworte-freizeittipps-17,
+#edit-schlagworte-freizeittipps-18,
+#edit-schlagworte-freizeittipps-20,
+#edit-schlagworte-freizeittipps-21 {
+  display: table-cell;
+}
+
+label[for=edit-schlagworte-freizeittipps-12],
+label[for=edit-schlagworte-freizeittipps-13],
+label[for=edit-schlagworte-freizeittipps-14],
+label[for=edit-schlagworte-freizeittipps-15],
+label[for=edit-schlagworte-freizeittipps-16],
+label[for=edit-schlagworte-freizeittipps-17],
+label[for=edit-schlagworte-freizeittipps-18],
+label[for=edit-schlagworte-freizeittipps-20],
+label[for=edit-schlagworte-freizeittipps-21] {
+  display: table-cell;
+  padding-left: 10px;
+  color: #537231;
+}
+
+/*#edit-schlagworte-freizeittipps-wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}*/
+
+/*Filterfelder Alter*/
+
+input#edit-alter-freizeittipps {
+  width: 20%;  
+}
+
+
+label[for=edit-alter-freizeittipps] {
+  text-align: left;
+}
+
+
+.form-item-alter-freizeittipps:after{
+  content:"Jahre";
+}
+
+/*Styling Checkboxes - geht nicht - http://stackoverflow.com/questions/3772273/pure-css-checkbox-image-replacement*/
+
+input[type=checkbox]:before { background: url("/sites/default/files/internal_images/checkbox_off.png") #fff;}
+input[type=checkbox]:checked:before { background: url("/sites/default/files/internal_images/checkbox_on.png") #fff; }
+
+
+  /* =============================================================================
+ *   View - Wandern
+ * ========================================================================== */
+
+/* Ansicht einzelbeiträge */
+ 
+.card-list-single-wandern {
+  background: #F7F8F9;
+  border: solid 1px #2386AA;  
+}
+
+ 
+ /* Filterfelder 
+ http://www.stripegenerator.com und http://www.colorzilla.com/gradient-editor/ */
+
+/* gemeinsames */ 
+#views-exposed-form-wandern-wandern,
+#views-exposed-form-freizeittipps-freizeittipps {
+  border: solid 1px ; 
+  border-bottom: none; 
+  border-radius: 6px 6px 0 0;
+  padding: 10px;
+}
+
+.page-freizeittipps .openlayers-views-map,
+.page-wandern .openlayers-views-map {
+  border: solid 1px;
+  border-top: none; 
+  border-radius: 0 0 6px 6px;
+}
+
+.page-wandern .openlayers-map div.olForeignContainer,
+.page-freizeittipps .openlayers-map div.olForeignContainer {
+  border-radius: 0 0 6px 6px;
+}
+
+/* Wandern */
+#views-exposed-form-wandern-wandern {
+  border-color: #2386AA;
+  background: #F7F8F9;
+}
+
+.page-wandern .openlayers-views-map {
+  border-color: #2386AA; 
+}
+
+
+/* Freizeittipps */
+#views-exposed-form-freizeittipps-freizeittipps {
+  border-color: #73B034;  
+  background: #F7F8F9;
+}
+
+.page-freizeittipps .openlayers-views-map {
+  border-color: #73B034; 
+}
+
+.view-kalender .view-filters {
+  border-top: #F55033 solid 1px;
+  border-left: #F55033 solid 1px;
+  border-right: #F55033 solid 1px;
+  background-color: #FFEBC5;
+  border-radius: 6px 6px 0 0;
+}
+
+.view-kalender .view-content {
+  border-left: #F55033 solid 1px;
+  border-right: #F55033 solid 1px;
+  background-color: #FFEBC5;
+}
+
+.view-kalender .view-footer {
+  border-bottom: #F55033 solid 1px;
+  border-left: #F55033 solid 1px;
+  border-right: #F55033 solid 1px;
+  background-color: #FFEBC5;
+  border-radius: 0 0 6px 6px;
+}
+
+
+#views-exposed-form-kalender-page {
+  border-left-color: red;
+}
+
+.view-kalender .fc-header-title h2 {
+  width: 10em;
+
+}
+
+/*Filterfelder als Table*/
+
+#edit-field-kategorie-tour-tid-wrapper,
+#edit-dauer-wrapper,
+#edit-schatten-wrapper,
+#edit-schlagworte-wandern-wrapper,
+#edit-alter-wandern-wrapper {
+  display: table;
+}
+
+
+.filter-toggle-button {
+  width: 200px;
+  padding: 0 10px;
+  border-radius: 4px 0 0 0;
+  text-align: left;
+  margin: -10px -10px;
+  background-color: #FBB218;
+  background-image: url("images/arrows-down.png");
+  background-repeat: no-repeat;
+  background-position: 180px 50%;
+  color: white;
+  font-family: "Walter Turncoat";
+  font-size: 130%;
+  vertical-align: middle;
+}
+
+.filter-toggle-button:hover {
+  cursor: pointer;
+}
+
+#views-exposed-form-kalender-page .filter-toggle-button {
+  margin: 0;
+}
+
+ /* Überschriften */
+
+label[for=edit-field-kategorie-tour-tid],
+label[for=edit-dauer],
+label[for=edit-schatten],
+label[for=edit-schlagworte-wandern],
+label[for=edit-alter-wandern] {
+  color: #2386AA;
+  display: table-row;
+  font-size: 120%;
+  text-align: left;
+}
+ 
+ /* Unterkategorie#1  
+
+.form-item-field-kategorie-tour-tid {
+  display: table-row;
+}
+
+#edit-field-kategorie-tour-tid-all {
+  display: table-cell;
+}
+
+label[for=edit-field-kategorie-tour-tid-all] {
+  display: table-cell;
+  padding-left: 10px;
+  color: #537231;
+}
+*/
+ 
+/*Filterfelder Alter*/
+
+input#edit-alter-wandern {
+  width: 20%;  
+}
+
+label[for=edit-alter-wandern] {
+  text-align: left;
+}
+
+.form-item-alter-wandern:after{
+  content:"Jahre";
+} 
+ 
+ 
+/*Style der Wanderungslinien*/
+polyline {
+  stroke-width: 3px;
+  color: #FBB218
+}
+
+/* =============================================================================
+ *   Ansicht des Einzelbeitrags
+ * ========================================================================== */
+
+
+/* Felder im rechten Block */
+
+.field-name-submitted-by,
+.field-name-changed-date {
+  font-size: 80%;
+  color: darkgrey;
+}
+ 
+.field-name-changed-date .field-item::before {
+  content: "Zuletzt geändert, am ";
+}
+ 
+.field-name-changed-date,
+.field-name-submitted-by,
+.field-name-inhalt-ohne-gew-hr,
+.field-name-field-bewertung,
+.flag-outer-veraltet {
+}
+ /* -----------Freizeittipp--------------*/
+
+article.node-freizeittipp .region-two-66-33-first {
+  background: #EAF9F2;
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+article.node-freizeittipp .region-two-66-33-second {
+  background: none;
+  border: 0px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.node-freizeittipp .field-name-field-adresse-einzeilig,
+.node-freizeittipp .field-name-field-ol-karte,
+.node-freizeittipp .field-name-field-schlagworte,
+.node-freizeittipp .field-name-field-bilder,
+.node-freizeittipp .field-name-field-alter,
+.node-freizeittipp .field-name-field-email
+ {
+  margin-bottom: 20px;
+}
+
+/* ------------- Wandern ---------------*/  
+
+article.node-wandern .region-two-66-33-first {
+  background: #F7F8F9;
+  border: 0px;  
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+article.node-wandern .region-two-66-33-second {
+  background: none;
+  border: 0px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+
+
+
+
+.node-wandern .field-name-field-dauer,
+.node-wandern .field-name-field-schatten,
+.node-wandern .field-name-field-ol-karte,
+.node-wandern .field-name-field-schlagworte-wandern,
+.node-wandern .field-name-field-alter,
+.node-wandern .field-name-field-bilder {
+  margin-bottom: 20px;
+}
+
+/* --------------- Event --------------------*/ 
+
+article.node-event .region-two-66-33-first {
+  background: #FFF1F0;
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+article.node-event .region-two-66-33-second {
+  background: none;
+  border: 0px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.node-event .field-name-field-datum-uhrzeit,
+.node-event .field-name-field-link,
+.node-event .field-name-field-telefon,
+.node-event .field-name-field-ol-adresse,
+.node-event .field-name-field-ol-karte {
+  margin-bottom: 20px; 
+}
+
+
+
+/* Kommentare*/
+
+#comments {
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: #C2C3C4;
+  background-color: #F7F8F9;
+  padding: 10px;
+/*  margin: 10px;*/
+} 
+
+
+
+/* =============================================================================
+ *   Listenelemente in Views
+ * ========================================================================== */
+
+
+.view-beitraege .card-list-wrapper ul li {
+  margin-right: 1.6%;
+}
+
+/* Views */
+.views-field-field-schlagworte ul,
+.field-name-field-schlagworte ul,
+.field-name-field-schlagworte-wandern ul,
+.field-name-field-schatten ul,
+.field-name-field-dauer ul {
+  list-style: none;
+}
+
+
+.field-name-field-schlagworte,
+.field-name-field-schlagworte-wandern {
+  float: right;
+}
+
+.views-field-field-schlagworte ul li,
+.field-name-field-schlagworte ul li {
+  display: inline;
+  float: none;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  margin: 0 0.3em 0 0 !important;
+}
+
+table.views-table td.editbutton a {
+   
+}
+
+table.views-table td.editbutton a:after {
+  content: url("images/edit.png");
+}
+
+table.views-table td.deletebutton a {
+   
+}
+
+table.views-table td.deletebutton a:after {
+  content: url("images/delete.png");
+}
+
+/* Node */
+
+
+/* =============================================================================
+ *   Suche
+ * ========================================================================== */
+
+
+.block-search-form .container-inline {
+  /* make the parent element relative, for absolute positioning of 
+  the button icon */
+  position: relative;
+}
+
+.form-item-search-block-form {
+  -webkit-border-radius: 38;
+  -moz-border-radius: 38;
+  border-radius: 38px;
+  -webkit-box-shadow: inset 0px 1px 3px #666666;
+  -moz-box-shadow: inset 0px 1px 3px #666666;
+  box-shadow: inset 0px 1px 3px #666666;
+
+  font-size: 17px;
+  background: #ffffff;
+  padding: 6px 40px 6px 10px;
+  margin: 0 auto;
+  border: solid rgba(246, 179, 97, 1) 1px;
+}
+
+#block-search-form input.form-text {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: #a8a8a8;
+}
+
+.form-item-search-block-form:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #f6f6f6);
+  background-image: -moz-linear-gradient(top, #ffffff, #f6f6f6);
+  background-image: -ms-linear-gradient(top, #ffffff, #f6f6f6);
+  background-image: -o-linear-gradient(top, #ffffff, #f6f6f6);
+  background-image: linear-gradient(to bottom, #ffffff, #f6f6f6);
+  text-decoration: none;
+}  
+
+#block-search-form input.form-text:focus {
+    outline: 0;
+}
+
+ /* Such-Button/Icon */
+#block-search-form div.form-actions {
+  position: relative;
+  top: 3px;
+  right: 28px;
+}
+
+#tasks {
+  float: right;
+}
+
+/*----- Suchergebnisse -----*/
+
+.page-search .ds-search-extra {
+  font-size: 150%;
+  margin-bottom: 20px;
+}
+
+.group-result-freizeittipp {
+  background: #EAF9F2;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.group-result-wandern {
+  background: #F7F8F9;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.group-result-event {
+  background: #FFF1F0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.group-result-other {
+  background: #EBECED;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.group-result-freizeittipp .node-freizeittipp,
+.group-result-wandern  .node-wandern,
+.group-result-event .node-event,
+.group-result-other {
+  margin-bottom: 5px !important; 
+  padding-left: 10px;
+}
+
+.group-result-freizeittipp .fieldset-legend,
+.group-result-wandern  .fieldset-legend,
+.group-result-event .fieldset-legend,
+.group-result-other .fieldset-legend {
+  font-size: 150%;
+}
+
+.group-result-freizeittipp .field-name-title,
+.group-result-wandern  .field-name-title,
+.group-result-event .field-name-title,
+.group-result-other .field-name-title {
+  font-size: 120%;
+}
+
+.group-result-other .node-header a {
+  font-family: Raleway;
+  font-size: 60%;
+}
+
+
+/* =============================================================================
+ *   Startseite
+ * ========================================================================== */
+
+.startseite ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+.view-startseite ul li {
+  text-align: center;
+  display: inline-block;
+}
+
+.view-startseite ul li .views-field-name span a{
+  position: relative;
+  top: -2em;
+  font-family: 'Shadows Into Light';
+  font-size: 22px;
+  color: darkgrey;
+  text-shadow: -1px 1px black;
+}
+
+/* =============================================================================
+ *   Kalender
+ * ========================================================================== */
+
+/* Ganztagesevents auch gleiche HG-Farbe wie andere Events */
+.view-event-kalender .month-view .full td.multi-day div.monthview,
+.view-event-kalender .month-view .full td.multi-day .inner .monthview .continues {
+  background: none repeat scroll 0% 0% #FFC;
+}
+.view-event-kalender .month-view .full tr.single-day .no-entry, 
+.view-event-kalender .month-view .full {
+  box-shadow: 0px 8px 8px -9px #D3D3D3 inset;
+}
+
+
+.view-event-kalender td,
+.view-event-kalender .month-view .full td.multi-day div.monthview {
+  color: #777;
+}
+
+/* --- Events - Tutorial: http://www.cmsquickstart.com/blog/style-event-calendar-drupal-7 --- */
+
+.view-event-kalender {
+  margin-top:20px;
+}
+.view-event-kalender .view-content {
+  padding-bottom:20px;
+}
+
+.view-event-kalender.view-display-id-page_week .view-content,
+.view-event-kalender.view-display-id-page_day .view-content {
+  padding-top: 12px;
+  border-radius: 6px 6px 0 0;
+  border-top: 1px solid #F55033;
+}
+.calendar-calendar {
+  width:100%;
+ /* padding-top: 20px;*/
+}
+.calendar-calendar .month-view {
+/*  box-shadow:0 0 10px #000000;*/
+}
+
+/* --- Vor/Zurück-Buttons --- */
+
+.view .date-nav-wrapper .date-nav {
+  color:#FE251C;
+  border-radius:8px 8px 0 0;
+  width:100%;
+  margin:0;
+}
+
+.view .date-nav-wrapper .date-prev {
+  left: 0;
+  right: auto;
+  font-family: 'Walter Turncoat';
+  text-align: right;
+  background: none;
+}
+
+
+.view .date-nav-wrapper .date-next {
+  right:0;
+  font-family: 'Walter Turncoat';
+  text-align:left;
+  background: none;
+}
+
+.view .date-nav-wrapper .date-prev a,
+.view .date-nav-wrapper .date-next a {
+  font-size: 130%;
+  color: #FF6673;
+}
+
+
+.view .date-nav-wrapper .date-heading {
+  color: #ff6673;
+}
+
+/* --- Event-Legende --- */
+
+.view-event-kalender #event-legend ul{
+  list-style: none;
+}
+
+.view-event-kalender #event-legend ul li{
+  display: inline;
+  margin: 0 10px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+}  
+
+#event-legend #cal_fest {
+  border-top: 3px solid #F55033;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+#event-legend #cal_kasperl {
+  border-top: 3px solid #66F208;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+#event-legend #cal_boerse {
+  border-top: 3px solid #1537F5;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+#event-legend #cal_musik {
+  border-top: 3px solid #F7278F;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+#event-legend #cal_messen {
+  border-top: 3px solid #0FC196;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+#event-legend #cal_sonstiges {
+  border-top: 3px solid #F8B926;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  background-color: #FFFFCC;
+}
+
+
+.view-event-kalender #event-legend {
+  padding: 8px 12px;
+  text-align: center;
+}
+/* --- Einzelne Zellen der Monatsansicht --- */
+  
+.calendar-calendar td {
+  border:1px solid #dadada;
+  border-right-color:#dadada;
+  border-bottom-color:#e3e3e3;
+}
+.calendar-calendar td.empty {
+  border-color:#dadada;
+  color:#dadada;
+}
+.calendar-calendar .month-view .full td.date-box.today,
+.calendar-calendar .month-view .full tr td.multi-day.ends-today,
+.calendar-calendar .month-view .full tr td.single-day.today {
+  border-color:#FE251C;
+}
+
+/*td.single-day {
+  background:url(../images/cell-bg.png) bottom repeat-x;
+}*/
+
+td.single-day .inner {
+  min-height:50px;
+}
+  
+/* --- Events --- */
+
+.calendar-calendar .month-view .full td.multi-day div.monthview,
+.calendar-calendar .week-view .full td.multi-day div.weekview,
+.calendar-calendar .day-view .full td.multi-day div.dayview,
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues,
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
+  background:url(../images/event-bg.png) bottom repeat-x;
+  border-radius:10px;
+}
+.calendar-calendar .month-view .full td.multi-day .calendar.monthview .contents,
+.calendar-calendar .week-view .full td.multi-day .calendar.weekview .contents {
+  top:2px;
+}
+.calendar-calendar .item {
+  color:#333333;
+}
+.calendar-calendar .item a {
+  color:#333333;
+  text-shadow:1px 1px 0px #ffffff;
+}
+.calendar-calendar .item .continues {
+  color:#333333;
+}  
+
+
+  /* =============================================================================
+ *   Full-Kalender
+ * ========================================================================== */
+ 
+.page-kalender .colors-taxonomy-term-66,
+.page-kalender .colors-taxonomy-term-65,
+.page-kalender .colors-taxonomy-term-64,
+.page-kalender .colors-taxonomy-term-63,
+.page-kalender .colors-taxonomy-term-76,
+.page-kalender .colors-taxonomy-term-75,
+.page-kalender .colors-taxonomy-term-86 {
+  float: left;
+  margin-right: 10px;
+ }
+ 
+.fc-event-time {
+  float: left;
+  font-size: 90%;
+}
+
+.fc-event-title {
+  float: left;
+  clear: left;
+}
+
+table.fc-header {
+  border: none;
+}
+table.fc-header tbody tr {
+  border: none;
+}
+.fc-content td.fc-day.ui-widget-content.ui-state-highlight {
+  background: #FCD994;
+}
+
+/* =============================================================================
+ *   Font-Styling
+ * ========================================================================== */
+
+/*"Beitrag erstellt von ...."*/
+ 
+.author-datetime {
+  font-style: italic;
+  font-size: 70%;
+}
+
+/* Block-Titel*/
+ 
+.block-title {
+  font-size: 1em
+}
+
+
+/* =============================================================================
+ *   Status Messages
+ * ========================================================================== */
+
+ /* funktioniert nicht
+ 
+ #messages {
+  border-radius: 15px;
+  font-size: 120%;
+  color: red;
+  background-color: ffd966
+}
+*/
+
+ 
+/* =============================================================================
+ *   Login
+ * ========================================================================== */
+
+ 
+#block-user-login {}
+.not-logged-in.page-user-login .register_link,
+.not-logged-in.page-user-login .password_link{
+/*   clear: both; */
+  text-align: center;
+}
+
+#auth_box input[type="submit"] {
+  float: none;
+  width: 100%;
+}
+
+div#auth_box .login {
+  padding-top: 10px;
+}
+
+div#auth_box #middle_part img {
+  float: right;
+  width: 80px;
+  height: auto;
+}
+
+/* tabs */
+.not-logged-in.page-user-login ul.tabs {
+/*  border: none;*/
+}
+
+.not-logged-in.page-user-login #header,
+.not-logged-in.page-user-password #header {
+ /* float: left;*/
+}
+
+.not-logged-in.page-user-login #columns,
+.not-logged-in.page-user-password #columns {
+/*  float: right;
+  width: 50%;*/
+}
+
+#user-login > div > div.form-item.form-type-password.form-item-pass > label,
+#user-login > div > div.form-item.form-type-textfield.form-item-name > label {
+/*  display: inline-block;
+  width: 160px;*/
+}
+
+.not-logged-in.page-user-login section#main-content,
+.not-logged-in.page-user-password section#main-content {
+/*   border: lightgrey 1px solid; */
+/*   border-radius: 6px; */
+/*   width: 80%; */
+/*   float: right; */
+/*   margin: 2em; */
+/*   padding: 2.3em; */
+}
+ 
+.not-logged-in.page-user-login #header #logo,
+.not-logged-in.page-user-password #header #logo{
+/*  float: none;*/
+}
+
+.not-logged-in.page-user-login h1#page-title,
+.not-logged-in.page-user-password h1#page-title {
+}
+
+.not-logged-in.page-user-login .form-item input,
+.not-logged-in.page-user-password input#edit-name {
+  padding: 2px 3px 3px 4px;
+  border-radius: 4px;
+}
+
+/* login inputs */
+.not-logged-in.page-user-login .form-item input {
+/*   width: 10em; */
+}
+
+/* pasword recovery inputs */
+.not-logged-in.page-user-password input#edit-name {
+/*     width: 20em; */
+}
+
+
+/* =============================================================================
+ *   Impressum etc.
+ * ========================================================================== */
+
+#block-block-13 {
+  text-align: center;
+}
+
+#block-block-13 a {
+  color: #696969;
+}
+
+#block-block-13 ul {
+    list-style: none;
+}
+
+#block-block-13 ul li {
+  display: inline-block;
+}
+
+#block-block-13 ul li:after {
+  content: " | ";
+  color: #696969;
+}
+
+#block-block-13 ul li:last-child:after {
+  content: "";
+}
+
+
+
+
+/* =============================================================================
+ *   Tab navigation (https://drupal.org/node/211659)
+ * ========================================================================== */
+ 
+
+ ul.primary {
+  border: 0px;
+  border-collapse: collapse;
+  /*background-color: none;
+  padding: 0 5px 0 5px;
+  white-space: nowrap;
+  list-style: none;
+  margin: 3px;
+  height: auto;
+  line-height: normal;*/
+}
+
+ul.primary li {
+  /*display: inline;*/
+  background-color: none;
+  border: none;
+}
+
+ul.primary li a{
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 0;
+  height: auto;
+/*   margin-right: 0.5em; */
+  margin-right: 0;
+  text-decoration: none;
+  box-shadow: 1px 7px 9px -6px darkgrey;
+}
+
+ul.primary li:first-child a {
+  border-radius: 10px 0 0 10px;
+}
+
+ul.primary li:last-child a {
+  border-radius: 0 10px 10px 0;
+}
+
+ul.primary li.active a {
+  background-color: #FBB218;
+  color: #ffffff;
+  border: 1px solid #DB9813;
+}
+
+ul.primary li a:hover{
+  background-color: #FCD994;
+  border-color: #DB9813;
+  color: #ffffff;
+  box-shadow: 1px 9px 9px -6px darkgrey;
+}
+
+
+/* --- Buttons Neuer Beitrag --- */
+
+
+.neuer_Beitrag{
+  margin: 20px 0 3px 0;
+}
+
+.neuer_Beitrag a{
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+  height: auto;
+/*   margin-right: 0.5em; */
+  margin-right: 0;
+  text-decoration: none;
+  box-shadow: 1px 7px 9px -6px darkgrey;
+}
+
+.neuer_Beitrag a:hover {
+  background-color: #FCD994;
+  border-color: #DB9813;
+  color: #ffffff;
+  box-shadow: 1px 9px 9px -6px darkgrey;
+}
+
+
+.page-event-kalender div#tasks {
+  width: 100%;
+  float: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 3px;
+  box-shadow: 1px 7px 5px -7px darkgrey;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-width: 3px;
+  box-shadow: 1px 7px 9px -6px darkgrey;
+}
+
+
+  
+
+select.form-select {
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 6px;
+/*  padding: 0px 20px;*/
+  text-decoration: none;
+  font-size: 120%;
+  text-align: center;
+/*  box-shadow: 1px 7px 9px -6px darkgrey;*/
+  text-shadow: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+  
+/* Allgemeiner Kindisch-Button */
+.kindischbutton,
+button, input[type="button"],
+input[type="reset"], input[type="submit"],
+ul.action-links li a {
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 10px;
+  padding: 2px 20px;
+  text-decoration: none;
+  font-size: 120%;
+  text-align: center;
+  box-shadow: 1px 7px 9px -6px darkgrey;
+  text-shadow: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.kindischbutton:hover,
+button:hover, input[type="button"]:hover,
+input[type="reset"]:hover, input[type="submit"]:hover,
+ul.action-links li a:hover {
+  background-color: #FCD994;
+  border-color: #DB9813;
+  color: #ffffff;
+  box-shadow: 1px 9px 9px -6px darkgrey;
+  text-shadow: none;
+}
+
+/* remove the outline and add a 2px border for all focussed elements */
+.kindischbutton:focus,
+button:focus, input[type="button"]:focus,
+input[type="reset"]:focus, input[type="submit"]:focus,
+ul.action-links li a:focus,
+select.form-select:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+/* Absende - Button im FilterFormular der Views */ 
+#views-exposed-form-wandern-wandern .views-exposed-form input.form-submit,
+#views-exposed-form-freizeittipps-freizeittipps .views-exposed-form input.form-submit {
+  /*width: 200px;*/
+  padding: 0px 10px;
+  border-radius: 4px;
+  text-align: left;
+  padding-right: 25px;
+  background-color: #FBB218;
+  background-image: url('images/arrows-right.png');
+  background-repeat: no-repeat;
+  background-position: right 50%;
+  color: #FFF;
+  font-family: "Walter Turncoat";
+  font-size: 130%;
+  vertical-align: middle;
+}
+
+
+/* Views/Calendar Filter Button unten */
+#views-exposed-form-event-kalender-page-month .views-exposed-form .views-exposed-widget {
+  float: none;
+}
+
+.views-exposed-widgets {
+  margin-bottom: 0;
+}
+
+/* --- Button Add to Calendar --- 
+
+.addtocal,
+ul.addtocal_menu {
+  background-color: #ffffff;
+  border: 1px solid #FFC552;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  height: auto;
+  margin-left: 20px;
+  text-decoration: none;
+  box-shadow: 1px 7px 9px -6px darkgrey;
+}
+
+.addtocal:hover{
+  background-color: #FCD994;
+  border-color: #DB9813;
+  color: #ffffff;
+  box-shadow: 1px 9px 9px -6px darkgrey;
+}
+
+ul.addtocal_menu li a:hover  {
+  color: #DB9813;
+  background: none;
+}
+
+.addtocal.active {
+  background-color: #FBB218;
+  color: #ffffff;
+  border: 1px solid #DB9813;
+}
+*/
+
+
+/*
+ul.secondary {
+  border-bottom: 1px solid #1F1F1F;
+  padding: 0.5em 1em;
+  margin: 5px;
+}
+
+ul.secondary li {
+  display: inline;
+  padding: 0 1em;
+  border-right: 1px solid #1F1F1F;
+}
+
+ul.secondary a {
+  padding: 0;
+  text-decoration: none;
+}
+
+ul.secondary a.active {
+  border-bottom: 4px solid #1F1F1F;
+}
+*/
+
+ul.action-links li {
+  /*display: inline;*/
+  background-color: none;
+  border: none;
+}
+
+/*ul.action-links li a {
+  background-color: #ffffff;
+  border: 1px solid #DB9813;
+  border-radius: 4px;
+  height: auto;
+  margin-right: 0.5em;
+  text-align: center;
+  padding: 5px 12px 5px 12px;
+}
+
+ul.action-links li a:hover {
+  background-color: #FCD994;
+  border-color: #DB9813;
+  color: #ffffff;
+}*/
+
+/*#edit-kategorie-freizeittipps-wrapper > div,
+#edit-schlagworte-freizeittipps-wrapper > div {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background: white;
+  border: 1px solid #73B034;  
+  border-radius: 4px;
+  box-shadow: 1px 6px 8px 0px darkgrey;
+}
+*/
+
+
+/* graue Kastln weg. */
+.no-term-reference-tree-button {
+  background-color: transparent;
+}
+
+
+#edit-kategorie-freizeittipps-wrapper div.views-widget {
+  padding: 10px;
+}
+
+#edit-kategorie-freizeittipps-wrapper div.views-widget ul {
+  list-style: none;
+  margin: 0;
+}
+
+#edit-kategorie-freizeittipps-wrapper > div > div > div > ul.bef-tree,
+#edit-kategorie-freizeittipps-wrapper > div > div > div > ul.bef-tree > ul.bef-tree-child {
+  padding: 0;
+}
+
+#edit-kategorie-freizeittipps-wrapper > div > div > div > ul > ul > li > div > label {
+/* #edit-kategorie-freizeittipps-wrapper div.views-widget ul li .form-item label { */
+  padding-top: 5px;
+/*   padding-left: 10px; */
+}
+
+/* =============================================================================
+ *   Revisioning
+ * ========================================================================== */
+
+/* aktuelle, publishte revision grün 
+table.table-revisions tr.revision-current.published,
+table.table-revisions tr.revision-current.published td {
+  background-color: #be7;
+  
+}*/
+
+/* =============================================================================
+ *   Workflow
+ * ========================================================================== */
+
+/*
+#edit-workflow input[type="submit"] {
+  margin-left: 3px;
+  margin-right: 3px;
+}*/
+
+/* Entwurf */
+label[for="edit-workbench-moderation-state-new-draft"] {
+  border: 1px solid rgba(113, 189, 195, 1);
+  padding: 1px 7px;
+  border-radius: 7px;
+  background-color: rgba(212, 230, 230, 1);
+}
+
+/* In Moderation */
+label[for="edit-workbench-moderation-state-new-needs-review"] {
+  border: 1px solid rgba(222, 236, 9, 1);
+  padding: 1px 7px;
+  border-radius: 7px;
+  background-color: rgba(252, 250, 112, 1);
+} 
+
+/* Veröffentlicht */
+label[for="edit-workbench-moderation-state-new-published"] {
+  border: 1px solid rgba(60, 168, 9, 1);
+  padding: 1px 7px;
+  border-radius: 7px;
+  background-color: rgba(162, 255, 139, 1);
+} 
+
+
+/* =============================================================================
+ *   Bookmarks
+ * ========================================================================== */
+
+/* remove nasty throbber from "my bookmarks" page */
+span.flag-bookmarks span.flag-throbber {
+  display: none;
+}
+
+
+/* "Protokollnachricht der Version" beim Erstellen von Beitrag entfernen */
+div.form-item-log {
+  display: none;
+}
+
+/* =============================================================================
+ *   Fivestar
+ * ========================================================================== */
+div.fivestar-widget {
+  min-width: 90px;
+}
+
+/* =============================================================================
+ *   Beitrags-Eingabe
+ * ========================================================================== */
+
+#freizeittipp-node-form label[for=edit-title], 
+#wandern-node-form label[for=edit-title],
+#event-node-form label[for=edit-title],
+#edit-field-ol-adresse-und-0 .fieldset-legend ,
+label[for=edit-field-kategorie-und],
+#edit-field-alter-und-0 .fieldset-legend,
+label[for=edit-body-und-0-value],
+label[for=edit-field-oeffnungszeiten-und-0-value],
+label[for=edit-field-kosten-und-0-value],
+#edit-field-bilder-und .fieldset-legend,
+label[for=edit-field-schlagworte-und],
+label[for=edit-field-kategorie-tour-und],
+label[for=edit-field-dauer-und],
+label[for=edit-field-schatten-und],
+label[for=edit-field-schlagworte-wandern-und],
+label[for=edit-field-gastwirtschaft-und-0-value],
+label[for=edit-field-kategorie-event-und],
+#edit-field-datum-uhrzeit .fieldset-legend,
+.form-required
+ {
+  font-size: 200%;
+}
+
+label[for=edit-field-telefon-und-0-value]:before {
+  content: "Kontakt \A";
+  white-space: pre;
+  font-size: 200%;
+}
+
+#wandern-node-form  #edit-field-ol-karte:before {
+  content: "Tour zeichnen \A";
+  white-space: pre;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+#wandern-node-form #edit-field-ol-adresse-und-0 .fieldset-legend:after {
+  content: " suchen";
+}
+
+label[for=edit-workbench-moderation-state-new-needs-review]:after {
+  content: " (zur Freigabe) schicken";
+}
+
+label[for=edit-workbench-moderation-state-new-draft]:after {
+  content: " speichern";
+}
+
+label[for=edit-workbench-moderation-state-new-published]:before {
+  content: "Freigeben als ";
+}
+
+
+#freizeittipp-node-form .form-item-title,
+#wandern-node-form .form-item-title,
+#event-node-form .form-item-title,
+#edit-field-kategorie,
+#edit-field-alter,
+#edit-body,
+#edit-field-oeffnungszeiten,
+#edit-field-kosten,
+#edit-field-bilder,
+#edit-field-schlagworte,
+#edit-field-kategorie-tour,
+#edit-field-dauer,
+#edit-field-schatten,
+#edit-field-schlagworte-wandern,
+#edit-field-gastwirtschaft,
+#edit-field-kategorie-event,
+#edit-field-datum-uhrzeit
+ {
+  background-color: #FCF3E0;
+  border: 1px solid #FBB218;
+  border-radius: 6px;
+  padding: 5px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+#edit-field-ol-adresse,
+#edit-field-telefon {
+  background-color: #FCF3E0;
+  border-color: #FBB218;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  border-radius: 6px 6px 0px 0px;
+  padding: 20px 20px 1px 20px;
+}
+
+#edit-field-email{
+  background-color: #FCF3E0;
+  border-color: #FBB218;
+  border-style: solid;
+  border-width: 0px 1px 0px 1px;
+  padding: 1px 20px 1px 20px;
+}
+
+#edit-field-ol-karte,
+#edit-field-link{
+  background-color: #FCF3E0;
+  border-color: #FBB218;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 0px 0px 6px 6px;
+  padding: 1px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]#edit-title {
+  font-size: 200%;
+  padding: 3px 0;
+  
+}
+
+.description.geofield-help {
+  display: none;
+  }
+
+/* =============================================================================
+ *   404 403 - Seiten
+ * ========================================================================== */
+
+  
+#node-121 img,
+#node-122 img {
+  border-radius: 7px;
+}
+
+#media-ident:after {
+  content: "global.styles";
+}

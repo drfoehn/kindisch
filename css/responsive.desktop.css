@@ -1,0 +1,307 @@
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+body {
+  background: url("/sites/default/files/internal_images/hintergrund3.jpg") center center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 25px;
+}
+
+#page {
+  box-shadow: 0 0 10px rgba(92, 84, 84, 1);
+  border-radius: 10px;
+}
+
+#block-menu-menu-startmenu ul.menu {
+  
+}
+
+#block-menu-menu-startmenu ul.menu li {
+  float: left;
+  list-style: none;
+  width: 30%;
+  height: 300px;
+  border: 1px solid lightgrey;
+  margin: 0 15px !important;
+  text-align: center;
+  border-radius: 12px;
+}
+
+#block-menu-menu-startmenu ul.menu li:hover {
+  background-color: #FFB510;
+}
+
+
+/* LOGO-Block */ /*TODO: gibts des überhaupt noch?*/
+.region-header #block-block-2 {
+  float: left;
+}
+
+.region-header #block-system-user-menu {
+  float: right;
+}
+
+h2#site-slogan {
+  font-size: 1.8em;
+}
+
+
+
+div.region-header nav.block-system ul.menu li a.menu_icon {
+}
+
+
+/* =============================================================================
+ *   Startseite
+ * ========================================================================== */
+
+/* Übergeordneter Begriff (Bewegen, Staunen etc.) */
+.startseite ul li {
+  display: inline-block;
+  text-align: center;
+}	
+
+.startseite ul li img {
+  float: left;
+/*  width: 180px;
+  height: 180px;*/
+  margin: 5px;
+}
+
+
+#block-system-main .view-content .item-list {
+  text-align: center;
+}
+
+/* =============================================================================
+ *   Suche & Navigation
+ * ========================================================================== */
+.page-search #content:before {
+  content:url(images/suche.png);
+    float: right;
+}
+  
+.region-nav,
+.region-search {
+  margin: 10px;  
+  float: right;
+  clear: right;
+}
+
+/* =============================================================================
+ *   Karte
+ * ========================================================================== */
+ 
+.ds-2col-stacked-fluid .group-left {
+  width: 70%;
+}
+
+.ds-2col-stacked-fluid .group-right {
+  width: 20%;
+}
+
+
+/* =============================================================================
+ * "User menu" block for Drupal user menu
+ * ========================================================================== */
+.region-leaderboard {
+  margin: 0;
+  position: fixed;
+  z-index: 99;
+  right: 15px;
+  top: 40px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #5C5454; 
+  padding: 14px;
+}
+
+/*#block-block-9 .block-inner,
+#block-block-10 .block-inner {
+  margin: 0;
+}*/
+
+.region-nav .block-content ul {
+  text-align: right;
+}
+
+/* =============================================================================
+ * Hinzufügen-Buttons
+ * ========================================================================== */
+
+#freizeittipp_hinzufugen,
+#wanderung_hinzufugen {
+  width: 30%;
+}
+
+/* Spezifische Einstellungen für Button:Beitrag hinzufügen */
+
+.button_beitrag_hinzufugen {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* =============================================================================
+ * Positionierung der Social Buttons
+ * ========================================================================== */
+ 
+ /* Positionierung Ansicht Wandern und Tipp */
+ 
+ #___plusone_0 {
+  position: relative;
+ }
+ /*
+ .service-links-facebook-like {
+  position: relative;
+  left: -49px;
+ }
+ 
+ #twitter-widget-0 {
+  position: relative;
+  left: -36px;
+ }
+ 
+
+.field-name-service-links-displays-pinterest-button a {
+  position: relative;
+  left: -129px;
+}
+*/
+
+/* =============================================================================
+ *   Ansicht des Einzelbeitrags
+ * ========================================================================== */
+
+article.node-wandern .region-two-66-33-second .field-name-field-schlagworte-wandern {
+  text-align: right;
+}
+
+article.node-wandern .region-two-66-33-first .field-name-field-schlagworte-wandern ul {
+  padding: 0;
+}
+
+ 
+div.region.region-two-66-33-first {
+  width: 70%;
+  position: relative;
+}
+
+div.region.region-two-66-33-second  {
+  width: 25%;
+}
+
+article .region-two-66-33-second .field {
+  text-align: left;
+}
+
+/* Padding für content */
+article .region-two-66-33-first .region-inner,
+article .region-two-66-33-second .region-inner{
+   padding: 10px; 
+}
+
+/* Positionierung Ansicht Event */
+
+ .node-event #___plusone_0 {
+  position: relative;
+  left: -160px;
+ }
+ 
+ .node-event  .service-links-facebook-like {
+  position: relative;
+  left: -146px;
+ }
+ 
+ .node-event  #twitter-widget-0 {
+  position: relative;
+  left: -136px;
+ }
+ 
+
+ .node-event .field-name-service-links-displays-pinterest-button a {
+  position: relative;
+  left: -226px;
+}
+
+/* Kommentare*/
+
+#comments .region-two-33-66-first {
+  width: 15%;
+  padding: 10px;
+}
+
+#comments .region-two-33-66-second {
+  width: 75%;
+  padding: 10px;
+}
+
+
+
+/* Views für Inhalte - Card lists */
+
+.view-beitraege .card-list-wrapper ul li {
+  width: 18.72%; /* www.responsivegridsystem.com/calculator */
+}
+
+.view-beitraege .card-list-wrapper ul li:nth-child(5n) {
+  margin-right: 0;
+}
+
+.region-leaderboard li {
+  display: block !important;
+}
+
+
+/* "Notizzettel" mit Userdaten+Link auf Beitragsseite */
+
+.field-name-presented-by {
+  position: relative;
+  float: right;
+  width: 155px;
+  height: 100px;
+  line-height: 1.5;
+}
+
+.field-name-presented-by .field-items {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  padding: 27px 30px;
+  font-size: 80%;
+  background-size: contain;  
+  background-image: url("images/post-it.png");
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 160px;
+}
+
+.field-name-presented-by div.user-picture {
+  width: 60px;
+  float: right;
+}
+
+/* =============================================================================
+ *   Eingabeseiten für Inhaltstypen
+ * ========================================================================== */
+
+label[for=edit-workbench-moderation-state-new-needs-review],
+label[for=edit-workbench-moderation-state-new-draft],
+label[for=edit-workbench-moderation-state-new-published]
+ {
+  font-size: 200%;
+}
+#media-ident:after {
+  content: "desktop";
+}

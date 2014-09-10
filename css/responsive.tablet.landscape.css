@@ -1,0 +1,26 @@
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete 
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+
+/* =============================================================================
+ *   Card-List 5
+ * ========================================================================== */
+
+.view-beitraege .card-list-wrapper ul li {
+  width: 18.72%; /* www.responsivegridsystem.com/calculator */
+}
+
+.view-beitraege .card-list-wrapper ul li:nth-child(5n) {
+  margin-right: 0;
+}
+
+#media-ident:after {
+  content: "tablet.landscape";
+}
